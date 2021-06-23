@@ -1,0 +1,42 @@
+.modal-fade-enter-from, .modal-fade-leave-to {
+  opacity: 0;
+}
+.modal-fade-enter-active, .modal-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.blow-up-enter-active {
+  animation: blowUp 0.3s ease;
+}
+.blow-up-leave-active {
+  animation: blowUp 0.1s ease;
+  animation-direction: reverse;
+}
+
+.alert-slide-enter-active {
+  animation: slideLeft 0.1s ease;
+}
+.alert-slide-leave-active {
+  animation: slideLeft 0.1s ease;
+  animation-direction: reverse;
+}
+
+@keyframes blowUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
